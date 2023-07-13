@@ -1,0 +1,16 @@
+{% extends 'partials/base.html'%} 
+{% block title %}Todo App{% endblock %}
+{% block content %}
+    <div class="border p-3">
+        <h3>Delete Task</h3>
+        <hr>
+        <div class="alert alert-danger">
+            <p>Are you sure you want to delete</p>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <a class="btn btn-secondary" href="{% url 'todo-index'%}">Cancel</a>
+            <input class="btn btn-danger" type="submit" value="Confirm">
+        </form>
+        </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'partials/base.html'%} 
+{% block title %}Todo App{% endblock %}
+{% block content %}
+    <div class="border p-3">
+        <form method = "POST">
+            {% csrf_token %}
+            {{ form }}
+            <input class="btn btn-success btn-block"  type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}
